@@ -1,0 +1,33 @@
+services:
+  valheim:
+    image: mbround18/valheim:3
+    user: "111:1000"
+    stop_signal: SIGINT
+    ports:
+      - "32101:32101/udp"
+      - "32102:32102/udp"
+      - "32103:32103/udp"
+    environment:
+      PORT: 32101
+      NAME: "LanChelms Deep North"
+      WORLD: "Dedicated"
+      PASSWORD: ${VALHEIM_SERVER_PASSWORD}
+      TZ: "America/New_York"
+      PUBLIC: 0
+      AUTO_UPDATE: 0
+      AUTO_UPDATE_SCHEDULE: "0 1 * * *"
+      AUTO_BACKUP: 1
+      AUTO_BACKUP_SCHEDULE: "*/15 * * * *"
+      AUTO_BACKUP_REMOVE_OLD: 1
+      AUTO_BACKUP_DAYS_TO_LIVE: 3
+      AUTO_BACKUP_ON_UPDATE: 1
+      AUTO_BACKUP_ON_SHUTDOWN: 1
+      WEBHOOK_URL: ${VALHEIM_WEBHOOK_URL}
+      WEBHOOK_INCLUDE_PUBLIC_IP: 1
+      UPDATE_ON_STARTUP: 0
+      TYPE: "BepInEx"
+    volumes:
+      - /home/lc/lanchelms-valheim-data/saves:/home/steam/.config/unity3d/IronGate/Valheim
+      - /home/lc/lanchelms-valheim-data/server:/home/steam/valheim
+      - /home/lc/lanchelms-valheim-data/backups:/home/steam/backups
+
