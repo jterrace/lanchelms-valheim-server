@@ -19,7 +19,7 @@ services:
       AUTO_BACKUP_ON_UPDATE: 1
       AUTO_BACKUP_ON_SHUTDOWN: 1
       WEBHOOK_URL: ${VALHEIM_WEBHOOK_URL}
-      WEBHOOK_INCLUDE_PUBLIC_IP: 1
+      WEBHOOK_INCLUDE_PUBLIC_IP: 0
       UPDATE_ON_STARTUP: 0
       TYPE: "BepInEx"
       MODIFIERS: "combat=normal,deathpenalty=casual,resources=muchmore,raids=none,portals=normal"
