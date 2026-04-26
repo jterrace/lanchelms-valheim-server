@@ -1,6 +1,7 @@
 services:
   valheim:
     image: mbround18/valheim:3
+    container_name: "lanchelms-valheim-server"
     user: "111:1000"
     stop_signal: SIGINT
     ports:
