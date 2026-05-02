@@ -28,7 +28,7 @@ services:
         deathpenalty=casual,\
         portals=normal,\
         raids=none,\
-        resources=muchmore\
+        resources=most\
       "
     volumes:
       - /home/lc/lanchelms-valheim-data/saves:/home/steam/.config/unity3d/IronGate/Valheim
