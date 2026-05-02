@@ -23,7 +23,13 @@ services:
       WEBHOOK_INCLUDE_PUBLIC_IP: 0
       UPDATE_ON_STARTUP: 0
       TYPE: "BepInEx"
-      MODIFIERS: "combat=normal,deathpenalty=casual,resources=muchmore,raids=none,portals=normal"
+      MODIFIERS: "\
+        combat=normal,\
+        deathpenalty=casual,\
+        portals=normal,\
+        raids=none,\
+        resources=muchmore\
+      "
     volumes:
       - /home/lc/lanchelms-valheim-data/saves:/home/steam/.config/unity3d/IronGate/Valheim
       - /home/lc/lanchelms-valheim-data/server:/home/steam/valheim
