@@ -3,6 +3,7 @@ services:
     image: mbround18/valheim:3
     container_name: "lanchelms-valheim-server"
     user: "111:1000"
+    stop_grace_period: 60s
     stop_signal: SIGINT
     ports:
       - "32101:32101/udp"
