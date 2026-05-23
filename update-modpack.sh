@@ -83,6 +83,10 @@ done
 rm -rf ~/lanchelms-valheim-data/server/BepInEx/config/AzuAntiCheat_Greylist/**
 mv ~/lanchelms-valheim-data/server/BepInEx/plugins/ComfyMods-Gizmo ~/lanchelms-valheim-data/server/BepInEx/config/AzuAntiCheat_Greylist/
 
+# Remove maintenance mode if it was turned on
+rm -f ~/lanchelms-valheim-data/server/BepInEx/config/maintenance
+sed -i 's/Maintenance Mode = On/Maintenance Mode = Off/g' ~/lanchelms-valheim-data/server/BepInEx/config/org.bepinex.plugins.servercharacters.cfg
+
 # Prompt to start the server
 read -p "Update finished. Start the Docker container? [y/N] " -n 1 -r
 echo
