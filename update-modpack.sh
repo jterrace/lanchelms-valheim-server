@@ -81,7 +81,10 @@ done
 
 # --- CLEANUP ---
 rm -rf ~/lanchelms-valheim-data/server/BepInEx/config/AzuAntiCheat_Greylist/**
+
+# greylist
 mv ~/lanchelms-valheim-data/server/BepInEx/plugins/ComfyMods-Gizmo ~/lanchelms-valheim-data/server/BepInEx/config/AzuAntiCheat_Greylist/
+mv ~/lanchelms-valheim-data/server/BepInEx/plugins/Advize-PlantEasily ~/lanchelms-valheim-data/server/BepInEx/config/AzuAntiCheat_Greylist/
 
 # Remove maintenance mode if it was turned on
 rm -f ~/lanchelms-valheim-data/server/BepInEx/config/maintenance
